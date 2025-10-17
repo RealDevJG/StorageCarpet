@@ -10,14 +10,8 @@ import org.jetbrains.annotations.Nullable;
 
 import static carpet.api.settings.RuleCategory.CREATIVE;
 
-/**
- * Here is your example Settings class you can plug to use carpetmod /carpet settings command
- */
 public class STCSimpleSettings
 {
-    /**
-     *  Custom validator class for your setting. If validate returns null - settings is not changed.
-     */
     private static class CheckValue extends Validator<Integer>
     {
         @Override
@@ -27,9 +21,6 @@ public class STCSimpleSettings
         }
     }
 
-    /**
-     *  Simple numeric setting, no use otherwise
-     */
     @Rule(
         options = {"32768", "250000", "1000000"},
         validators = {Validators.NonNegativeNumber.class, CheckValue.class},

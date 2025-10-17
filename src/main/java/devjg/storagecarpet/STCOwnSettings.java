@@ -15,11 +15,6 @@ public class STCOwnSettings
     @Rule(options = {"foo", "bar", "baz"}, categories = "misc", strict = false)
     public static String stringSetting = "foo";
 
-    /**
-     * this is a test thing
-     * to see if it shows up in
-     * /carpet rules
-     */
     @Rule(categories = "misc")
     public static Option optionSetting = Option.OPTION_A;
 

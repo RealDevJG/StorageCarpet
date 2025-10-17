@@ -2,8 +2,7 @@
   "required": true,
   "package": "devjg.storagecarpet.mixins",
   "mixins": [
-    "CrashReport_noopMixin",
-    "MobEntity_makarenaMixin"
+
   ],
   "client": [
   ],

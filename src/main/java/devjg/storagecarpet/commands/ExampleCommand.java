@@ -1,7 +1,9 @@
-package devjg.storagecarpet;
+package devjg.storagecarpet.commands;
 
 import carpet.utils.Messenger;
 import com.mojang.brigadier.CommandDispatcher;
+import devjg.storagecarpet.STCOwnSettings;
+import devjg.storagecarpet.STCSimpleSettings;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;

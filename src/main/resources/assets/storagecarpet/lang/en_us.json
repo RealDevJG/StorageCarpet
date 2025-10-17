@@ -1,0 +1,9 @@
+{
+  "carpet.rule.uselessNumericalSetting.desc": "Simple numeric setting, no use otherwise",
+  "carpet.rule.makarena.desc": "You can define your own catergories. It makes sense to create new category for all settings in your mod.",
+  "carpet.rule.intSetting.desc": "intSetting idk",
+  "carpet.rule.stringSetting.desc": "stringSetting idk",
+  "carpet.rule.optionSetting.desc": "optionSetting idk",
+  "carpet.rule.optionSetting.extra.0": "extras test thing for things",
+  "carpet.rule.boolSetting.desc": "boolSetting idk"
+}

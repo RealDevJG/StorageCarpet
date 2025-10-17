@@ -1,6 +1,6 @@
-package carpet_extension.mixins;
+package devjg.storagecarpet.mixins;
 
-import carpet_extension.ExampleSimpleSettings;
+import devjg.storagecarpet.STCSimpleSettings;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.control.LookControl;
@@ -25,13 +25,13 @@ public abstract class MobEntity_makarenaMixin extends LivingEntity
     @Inject(method = "tick", at = @At("HEAD"))
     private void makarena(CallbackInfo ci)
     {
-        if (ExampleSimpleSettings.makarena && onGround)
+        if (STCSimpleSettings.makarena && isOnGround())
         {
             int stage = age % 200;
-            if (stage > 155 && world.getClosestPlayer(this, 32.0) != null)
+            if (stage > 155 && getEntityWorld().getClosestPlayer(this, 32.0) != null)
             {
                 headYaw += 2;
-                prevHeadYaw += 2;
+                // prevHeadYaw += 2;
                 if (stage == 199)
                 {
                     addVelocity(0.0, 0.4, 0.0);

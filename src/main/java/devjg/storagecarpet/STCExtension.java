@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.mojang.brigadier.CommandDispatcher;
+import devjg.storagecarpet.commands.BreakpointCommand;
 import devjg.storagecarpet.commands.ExampleCommand;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.command.CommandRegistryAccess;
@@ -37,6 +38,7 @@ public class STCExtension implements CarpetExtension, ModInitializer
     public void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, final CommandRegistryAccess commandBuildContext)
     {
         ExampleCommand.register(dispatcher);
+        BreakpointCommand.register(dispatcher);
     }
 
     @Override

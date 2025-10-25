@@ -2,8 +2,6 @@ package devjg.storagecarpet.commands;
 
 import carpet.utils.Messenger;
 import com.mojang.brigadier.CommandDispatcher;
-import devjg.storagecarpet.STCOwnSettings;
-import devjg.storagecarpet.STCSimpleSettings;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.text.Text;
@@ -26,20 +24,14 @@ public class ExampleCommand
                             return 1;
                         })).
                 then(literal("second").
-                        executes( (c)-> listSettings(c.getSource()))));
+                        executes( (c)-> printCommandExecutionData(c.getSource()))));
     }
 
-    private static int listSettings(ServerCommandSource source)
+    private static int printCommandExecutionData(ServerCommandSource source)
     {
-        Messenger.m(source, "w Here is all the settings we manage:");
-        Messenger.m(source, "w Own stuff:");
-        Messenger.m(source, "w  - boolean: "+ STCOwnSettings.boolSetting);
-        Messenger.m(source, "w  - string: "+ STCOwnSettings.stringSetting);
-        Messenger.m(source, "w  - int: "+ STCOwnSettings.intSetting);
-        Messenger.m(source, "w  - enum: "+ STCOwnSettings.optionSetting);
-        Messenger.m(source, "w Carpet Managed:");
-        Messenger.m(source, "w  - makarena: "+ STCSimpleSettings.makarena);
-        Messenger.m(source, "w  - useless numerical setting: "+ STCSimpleSettings.uselessNumericalSetting);
+        Messenger.m(source, "w Executed from world file: " + source.getServer().getSaveProperties().getLevelName());
+        Messenger.m(source, "w Executed from world: " + source.getWorld().getRegistryKey().getValue());
+
         return 1;
     }
 }

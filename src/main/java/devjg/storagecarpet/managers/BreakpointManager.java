@@ -23,6 +23,7 @@ import java.util.*;
 public final class BreakpointManager {
     // String is worldId
     public static final Map<String, List<Watchers.Breakpoint>> worldBreakpoints = new HashMap<>();
+    public static boolean updatedThisTick = false;
 
     public static int addBreakpoint(CommandContext<ServerCommandSource> ctx) {
         BlockPos blockPos = ctx.getArgument("pos", DefaultPosArgument.class).toAbsoluteBlockPos(ctx.getSource());

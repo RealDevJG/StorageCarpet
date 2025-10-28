@@ -20,7 +20,7 @@ import java.util.Map;
 
 public class STCExtension implements CarpetExtension, ModInitializer
 {
-    public static String MOD_ID = "storagecarpet";
+    public static final String MOD_ID = "storagecarpet";
 
     @Override
     public void onInitialize() {

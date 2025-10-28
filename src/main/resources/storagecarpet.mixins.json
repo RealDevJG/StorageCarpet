@@ -1,12 +1,14 @@
 {
-  "required": true,
-  "package": "devjg.storagecarpet.mixins",
-  "mixins": [
-
-  ],
-  "client": [
-  ],
-  "injectors": {
-    "defaultRequire": 1
+    "required": true,
+    "package": "devjg.storagecarpet.mixins",
+    "mixins": [
+        "MinecraftServerMixin",
+        "WorldChunkMixin",
+        "WorldMixin"
+    ],
+    "client": [
+    ],
+    "injectors": {
+        "defaultRequire": 1
   }
 }
